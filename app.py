@@ -10,7 +10,8 @@ def index():
 def greet():
     name = request.form['name']
     age = request.form['age']
-    return render_template('greeting.html', name=name, age=age)
+    city = request.form['city']
+    return render_template('greeting.html', name=name, age=age, city=city)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
